@@ -9,6 +9,7 @@ import { RewardContainerComponent } from './components/reward-container/reward-c
 import { RewardItemComponent } from './components/reward-item/reward-item.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { VakiContainerComponent } from './components/vaki-container/vaki-container.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { VakiContainerComponent } from './components/vaki-container/vaki-contain
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
