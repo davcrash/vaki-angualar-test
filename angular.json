@@ -120,6 +120,10 @@
             "jestConfig": "apps/vakers/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },

@@ -10,6 +10,8 @@ import { RewardItemComponent } from './components/reward-item/reward-item.compon
 import { MatGridListModule } from '@angular/material/grid-list';
 import { VakiContainerComponent } from './components/vaki-container/vaki-container.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatGridListModule,
     MatCardModule,
     MatProgressBarModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],

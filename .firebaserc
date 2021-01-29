@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dosvueltasdev": {
+      "hosting": {
+        "vakers": [
+          "dosvueltasdev"
+        ]
+      }
+    }
+  }
+}

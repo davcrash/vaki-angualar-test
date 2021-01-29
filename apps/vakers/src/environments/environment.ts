@@ -4,6 +4,15 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: 'AIzaSyDDPzFgRy9hy2awxopJQexGHhjVGUlOGlk',
+    authDomain: 'pruebas-d0e3f.firebaseapp.com',
+    databaseURL: 'https://pruebas-d0e3f.firebaseio.com',
+    projectId: 'pruebas-d0e3f',
+    storageBucket: 'pruebas-d0e3f.appspot.com',
+    messagingSenderId: '825527117712',
+    appId: '1:825527117712:web:324f530ea382e842f67515',
+  },
 };
 
 /*
