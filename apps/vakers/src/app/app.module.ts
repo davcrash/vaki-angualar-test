@@ -7,9 +7,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { RewardContainerComponent } from './components/reward-container/reward-container.component';
 import { RewardItemComponent } from './components/reward-item/reward-item.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { VakiContainerComponent } from './components/vaki-container/vaki-container.component';
 
 @NgModule({
-  declarations: [AppComponent, RewardContainerComponent, RewardItemComponent],
+  declarations: [AppComponent, RewardContainerComponent, RewardItemComponent, VakiContainerComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
