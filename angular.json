@@ -50,7 +50,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "apps/vakers/src/styles.scss"
+              "apps/vakers/src/styles.scss",
+              "apps/vakers/src/_vakers-vaki-web-theme.scss"
             ],
             "scripts": []
           },
