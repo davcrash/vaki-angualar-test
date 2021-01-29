@@ -1,7 +1,8 @@
 {
   "version": 1,
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "81fe796c-1f75-4eb8-a85b-0f8873329311"
   },
   "schematics": {
     "@nrwl/angular": {
@@ -43,8 +44,14 @@
             "polyfills": "apps/vakers/src/polyfills.ts",
             "tsConfig": "apps/vakers/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/vakers/src/favicon.ico", "apps/vakers/src/assets"],
-            "styles": ["apps/vakers/src/styles.scss"],
+            "assets": [
+              "apps/vakers/src/favicon.ico",
+              "apps/vakers/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/vakers/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -105,7 +112,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/vakers"],
+          "outputs": [
+            "coverage/apps/vakers"
+          ],
           "options": {
             "jestConfig": "apps/vakers/jest.config.js",
             "passWithNoTests": true
@@ -134,7 +143,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/vakers-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/vakers-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
