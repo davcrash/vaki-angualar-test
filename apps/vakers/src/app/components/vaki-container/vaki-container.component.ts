@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { State } from '../../redux/reducers';
 import { Store, select } from '@ngrx/store';
 import { Subscription } from 'rxjs';
@@ -12,6 +12,7 @@ import { VakiState } from '../../redux/reducers/vaki.reducer';
   styleUrls: ['./vaki-container.component.scss'],
 })
 export class VakiContainerComponent implements OnInit, OnDestroy {
+  @Input() vakiId: string;
   subscription: Subscription = new Subscription();
   vaki: Vaki;
   isLoading = true;
@@ -24,9 +25,7 @@ export class VakiContainerComponent implements OnInit, OnDestroy {
   }
 
   loadVaki() {
-    this.store.dispatch(
-      vakiActions.loadVaki({ vakiId: '2F93DHr45K1KVBlbjksD' })
-    );
+    this.store.dispatch(vakiActions.loadVaki({ vakiId: this.vakiId }));
   }
 
   suscribeToVaki(): void {
