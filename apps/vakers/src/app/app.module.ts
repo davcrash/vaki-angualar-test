@@ -12,6 +12,10 @@ import { VakiContainerComponent } from './components/vaki-container/vaki-contain
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { effects } from './redux/effects';
+import { reducers } from './redux/reducers';
 
 @NgModule({
   declarations: [
@@ -27,8 +31,14 @@ import { EffectsModule } from '@ngrx/effects';
     MatGridListModule,
     MatCardModule,
     MatProgressBarModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
+    AngularFireModule.initializeApp(environment.firebase),
+    StoreModule.forRoot(reducers, {
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true,
+      },
+    }),
+    EffectsModule.forRoot(effects),
   ],
   providers: [],
   bootstrap: [AppComponent],
