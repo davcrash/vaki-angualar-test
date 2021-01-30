@@ -10,12 +10,14 @@ import { RewardItemComponent } from './components/reward-item/reward-item.compon
 import { MatGridListModule } from '@angular/material/grid-list';
 import { VakiContainerComponent } from './components/vaki-container/vaki-container.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { effects } from './redux/effects';
 import { reducers } from './redux/reducers';
+import { ShopcartContainerComponent } from './components/shopcart-container/shopcart-container.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { reducers } from './redux/reducers';
     RewardContainerComponent,
     RewardItemComponent,
     VakiContainerComponent,
+    ShopcartContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { reducers } from './redux/reducers';
     MatGridListModule,
     MatCardModule,
     MatProgressBarModule,
+
     AngularFireModule.initializeApp(environment.firebase),
     StoreModule.forRoot(reducers, {
       runtimeChecks: {

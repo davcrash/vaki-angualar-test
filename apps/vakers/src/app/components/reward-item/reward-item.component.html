@@ -18,6 +18,7 @@
       color="primary"
       [disabled]="reward.claimed >= reward.quantityAvailable"
       class="block-btn"
+      (click)="addToCart()"
     >
       {{ reward.value | currency: 'COP' }}
     </button>

@@ -1,3 +1,9 @@
 main {
   margin: 0px 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  flex: 2;
 }

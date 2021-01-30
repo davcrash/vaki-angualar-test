@@ -1,0 +1,34 @@
+<div class="container">
+  <mat-card *ngFor="let item of shopcart">
+    <img class="example-header-image" [src]="item.reward.img" />
+    {{ item.reward.title }}
+    <br />
+    <button
+      mat-mini-fab
+      color="accent"
+      aria-label="Example icon button with a plus one icon"
+      (click)="deleteCartItem(item.reward)"
+    >
+      -
+    </button>
+    {{ item.qty }}
+    <button
+      mat-mini-fab
+      color="accent"
+      aria-label="Example icon button with a plus one icon"
+      (click)="addCartItem(item.reward)"
+    >
+      +
+    </button>
+  </mat-card>
+  <h2>TOTAL:1231</h2>
+  <button
+    mat-stroked-button
+    color="primary"
+    class="block-btn"
+    [disabled]="total <= 0"
+    (click)="buyCart()"
+  >
+    Comprar {{ total | currency: 'COL' }}
+  </button>
+</div>
