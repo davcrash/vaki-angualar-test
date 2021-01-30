@@ -1,9 +1,6 @@
 main {
   margin: 0px 50px;
-  display: flex;
-  flex-direction: row;
-}
-
-.content {
-  flex: 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
 }
