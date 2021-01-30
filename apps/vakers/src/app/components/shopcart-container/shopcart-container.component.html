@@ -4,6 +4,8 @@
     <img class="example-header-image" [src]="item.reward.img" />
     {{ item.reward.title }}
     <br />
+    {{ item.reward.value | currency: 'COP' }}
+    <br />
     <button
       mat-mini-fab
       color="accent"
