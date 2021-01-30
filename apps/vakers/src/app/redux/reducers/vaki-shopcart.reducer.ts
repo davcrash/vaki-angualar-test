@@ -38,7 +38,7 @@ const reducer = createReducer(
     const itemsCopy = [...state.items];
     const newTotal = state.total - Number.parseInt(reward.value);
     if (currentQty === 1) {
-      itemsCopy.splice(index, 2);
+      itemsCopy.splice(index, 1);
       return { ...state, items: itemsCopy, total: newTotal };
     }
     itemsCopy[index] = {
